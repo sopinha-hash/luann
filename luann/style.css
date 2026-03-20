@@ -403,3 +403,38 @@ body {
 .convite-final h2 {
     font-size: 2.5rem;
 }
+
+        .titulo {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitulo {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+
+        .frase {
+            font-size: 1.4rem;
+            font-weight: 300;
+            line-height: 1.5;
+            max-width: 600px;
+            color: #d0d0d0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .titulo {
+                font-size: 2.5rem;
+            }
+            .subtitulo {
+                font-size: 1.1rem;
+            }
+            .frase {
+                font-size: 1.2rem;
+            }
+        }
