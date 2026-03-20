@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-control {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.btn-control:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+.btn-control.active {
+    background: rgba(255,255,255,0.4);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.timeline-container {
+    position: relative;
+    height: 500px;
+    margin-bottom: 30px;
+}
+
+.timeline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.evento-linha {
+    position: absolute;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+    border-radius: 2px;
+    opacity: 0.7;
+}
+
+.evento-ponto {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff6b6b;
+    border-radius: 50%;
+    top: -8px;
+    border: 3px solid white;
+    transition: all 0.5s ease;
+}
+
+.evento-ponto.active {
+    transform: scale(1.5);
+    background: #4ecdc4;
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.6);
+}
+
+.evento-atual {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    color: #333;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.evento-atual h2 {
+    color: #4ecdc4;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.evento-atual img {
+    max-width: 200px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.stats {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .evento-atual {
+        width: 95%;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+}

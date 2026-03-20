@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina do Tempo - 3°EMI 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Preparesse para ter um Viagem no Tempo</h1>
+            <p class="subtitle">Vamos Começar?</p>
+        </header>
+
+        <div class="controls">
+            <button id="btnInicio" class="btn-control active">Início</button>
+            <button id="btnProximo" class="btn-control">Próximo →</button>
+            <button id="btnAnterior" class="btn-control">← Anterior</button>
+            <button id="btnAleatorio" class="btn-control">🎲 Aleatório</button>
+        </div>
+
+        <div class="timeline-container">
+            <div id="timeline" class="timeline"></div>
+            <div id="eventoAtual" class="evento-atual">
+                <div class="evento-conteudo">
+                    <h2>Bem-vindo à Máquina do Tempo!</h2>
+                    <p>Clique em "Próximo" para começar a viagem no tempo da nossa turma!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <span id="contador">Evento <span id="numeroAtual">0</span> de <span id="totalEventos">0</span></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
