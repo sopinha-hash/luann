@@ -1,164 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3º EMI • 2026 | Turma de Informática</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3º EMI • 2026</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- NAVEGAÇÃO -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <span class="logo">3º EMI</span>
-            <div class="nav-links">
-                <a href="#home" class="nav-link active">Início</a>
-                <a href="#trajetoria" class="nav-link">Trajetória</a>
-                <a href="#turma" class="nav-link">Turma</a>
-                <a href="#curso" class="nav-link">Curso</a>
-                <a href="#convite" class="nav-link">Convite</a>
-            </div>
-        </div>
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="logo">3º EMI • 2026</div>
+    <nav>
+      <a href="#home">Início</a>
+      <a href="trajetoria.html">Trajetória</a>
+      <a href="#turma">Turma</a>
+      <a href="#curso">Curso</a>
+      <a href="#convite">Convite</a>
     </nav>
-    
-<style>
-html, body { 
-    height: 100vh; 
-    overflow: hidden; 
-}
-</style>
+  </header>
 
-<section>
-    <div class="frase">3º EMI - 2026<br>
-        Técnico em Informática<br>
-        Mais do que alunos,<br>
-        uma história sendo construída.
+  <!-- PÁGINA 1 - HOME -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <img src="imagem/pessoas.jpeg" alt="Foto da turma" class="hero-bg">
+
+    <div class="hero-content">
+      <span class="tag">3º EMI • 2026</span>
+      <p class="typed-text">3º EMI - 2026 
+Técnico em Informática <br>
+Mais do que alunos, <br>
+uma história sendo construída.</p>
+
+      <a href="trajetoria.html" class="btn-primary">próximo</a>
     </div>
-</section>
+  </section>
 
-    <section id="home" class="page active">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <div class="hero-title">
-                    <span class="highlight">3º EMI</span>
-                    <span class="year">• 2026</span>
-                </div>
-                <h1 class="hero-main">Turma de Informática</h1>
-                <p class="hero-subtitle typewriter">Mais do que alunos, uma história sendo construída.</p>
-                <button class="cta-button" onclick="scrollToSection('trajetoria')">
-                    Explorar nossa trajetória
-                </button>
-            </div>
+  <!-- PÁGINA 2 - TRAJETÓRIA -->
+ 
+  <!-- PÁGINA 3 - A TURMA -->
+  <section id="turma" class="section">
+    <div class="container">
+      <h2 class="section-title">A turma</h2>
+      <p class="section-subtitle">Cada um com seu jeito, todos parte da mesma história.</p>
+
+      <div class="students-grid">
+        <div class="student-card reveal">
+          <img src="img/aluno1.jpg" alt="Maria">
+          <div class="student-overlay">
+            <h3>Maria</h3>
+            <p>"Resolve tudo no último dia."</p>
+          </div>
         </div>
-    </section>
 
-    <!-- PÁGINA 2: TRAJETÓRIA -->
-    <section id="trajetoria" class="page">
-        <div class="container">
-            <h2 class="section-title">Nossa Trajetória</h2>
-            <div class="timeline">
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-year">1º ANO</div>
-                    <div class="timeline-content">
-                        <img src="assets/foto1.jpg" alt="1º Ano">
-                        <h3>Onde tudo começou…</h3>
-                        <p>Nervosismo, expectativa e a primeira "Olá, turma!"</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-delay="200">
-                    <div class="timeline-year">2º ANO</div>
-                    <div class="timeline-content">
-                        <img src="assets/foto2.jpg" alt="2º Ano">
-                        <h3>Entre desafios e risadas</h3>
-                        <p>Provas, trabalhos em grupo e memes que nunca morrem.</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-delay="400">
-                    <div class="timeline-year">3º ANO</div>
-                    <div class="timeline-content">
-                        <img src="assets/foto3.jpg" alt="3º Ano">
-                        <h3>O fim se aproxima</h3>
-                        <p>Agora entendemos o valor de cada aula, cada bronca, cada vitória.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="student-card reveal">
+          <img src="img/aluno2.jpg" alt="João">
+          <div class="student-overlay">
+            <h3>João</h3>
+            <p>"Ninguém sabe onde tá, mas passa."</p>
+          </div>
         </div>
-    </section>
 
-    <!-- PÁGINA 3: TURMA -->
-    <section id="turma" class="page">
-        <div class="container">
-            <h2 class="section-title">A Turma</h2>
-            <div class="grid-alunos">
-                <div class="aluno-card" data-hover="resolve tudo no último dia">
-                    <img src="https://via.placeholder.com/200x200/4a90e2/ffffff?text=M" alt="Maria">
-                    <h4>Maria</h4>
-                </div>
-                <div class="aluno-card" data-hover="ninguém sabe onde tá, mas passa">
-                    <img src="https://via.placeholder.com/200x200/4a90e2/ffffff?text=J" alt="João">
-                    <h4>João</h4>
-                </div>
-                <!-- ADICIONE MAIS ALUNOS AQUI -->
-            </div>
+        <div class="student-card reveal">
+          <img src="img/aluno1.jpg" alt="Ana">
+          <div class="student-overlay">
+            <h3>Ana</h3>
+            <p>"A que salva o grupo no trabalho."</p>
+          </div>
         </div>
-    </section>
 
-    <!-- PÁGINA 4: CURSO -->
-    <section id="curso" class="page">
-        <div class="container">
-            <h2 class="section-title">Nosso Curso</h2>
-            <p class="section-intro">Técnico em Informática - Desenvolvemos habilidades para o futuro.</p>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <div class="skill-icon">💻</div>
-                    <h4>Desenvolvimento Web</h4>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">⚙️</div>
-                    <h4>Lógica de Programação</h4>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-icon">🌐</div>
-                    <h4>Redes</h4>
-                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                </div>
-            </div>
+        <div class="student-card reveal">
+          <img src="img/aluno2.jpg" alt="Pedro">
+          <div class="student-overlay">
+            <h3>Pedro</h3>
+            <p>"Sempre diz que estudou pouco... e tira nota boa."</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- PÁGINA 5: VIRADA -->
-    <section id="virada" class="page">
-        <div class="container">
-            <h2 class="section-title emotional">A Virada</h2>
-            <p class="emotional-text">Durante essa jornada, não caminhamos sozinhos.</p>
-            <p class="emotional-text delay-1">Algumas pessoas fizeram parte dessa história.</p>
-            <p class="emotional-text delay-2">Algumas marcaram. Outras transformaram.</p>
+  <!-- PÁGINA 4 - NOSSO CURSO -->
+  <section id="curso" class="section dark-section">
+    <div class="container">
+      <h2 class="section-title">Nosso curso</h2>
+      <p class="section-subtitle">Mais do que estudar informática, aprendemos a construir soluções.</p>
+
+      <div class="skills-area">
+        <div class="skills-text reveal">
+          <p>
+            Somos alunos do curso técnico em informática.
+          </p>
+          <p>
+            Ao longo desses anos, desenvolvemos habilidades em:
+          </p>
+
+          <ul class="skills-list">
+            <li>💻 Desenvolvimento web</li>
+            <li>🌐 Lógica de programação</li>
+            <li>⚙️ Redes</li>
+            <li>🖥️ Sistemas</li>
+          </ul>
         </div>
-    </section>
 
-    <!-- PÁGINA 6: CONVITE -->
-    <section id="convite" class="page">
-        <div class="convite-container">
-            <div class="convite-reveal">
-                <p class="convite-texto">E entre todas essas pessoas...</p>
-                <p class="convite-texto delay-1">existe alguém especial.</p>
-            </div>
-            <div class="professor-reveal">
-                <h1 class="professor-nome">Professor Luan</h1>
-            </div>
-            <div class="convite-final">
-                <h2>Você aceita ser o padrinho da nossa turma?</h2>
-                <div class="convite-buttons">
-                    <button class="btn-aceito" onclick="aceitarConvite()">Aceito 😄</button>
-                    <button class="btn-jaaceitei" onclick="aceitarConvite()">Já aceitei desde o início 😎</button>
-                </div>
-            </div>
+        <div class="skills-bars reveal">
+          <div class="skill">
+            <span>Desenvolvimento web</span>
+            <div class="bar"><div class="fill" style="width: 92%;"></div></div>
+          </div>
+
+          <div class="skill">
+            <span>Lógica de programação</span>
+            <div class="bar"><div class="fill" style="width: 88%;"></div></div>
+          </div>
+
+          <div class="skill">
+            <span>Redes</span>
+            <div class="bar"><div class="fill" style="width: 76%;"></div></div>
+          </div>
+
+          <div class="skill">
+            <span>Sistemas</span>
+            <div class="bar"><div class="fill" style="width: 84%;"></div></div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- PÁGINA 5 - A VIRADA -->
+  <section id="virada" class="section soft-section">
+    <div class="container narrow reveal">
+      <h2 class="section-title">A virada</h2>
+      <p class="big-text">
+        Durante essa jornada, não caminhamos sozinhos.
+      </p>
+      <p class="big-text">
+        Algumas pessoas fizeram parte dessa história.<br>
+        Algumas marcaram.<br>
+        Outras transformaram.
+      </p>
+    </div>
+  </section>
+
+  <!-- PÁGINA 6 - O CONVITE -->
+  <section id="convite" class="section final-section">
+    <div class="container narrow">
+      <div class="convite-box reveal">
+        <p class="suspense">E entre todas essas pessoas...</p>
+        <p class="suspense delay">existe alguém especial.</p>
+
+        <h2 class="professor">Professor Luan,</h2>
+
+        <p class="question">
+          Você aceita ser o padrinho da nossa turma?
+        </p>
+
+        <div class="buttons">
+          <button class="btn-primary" onclick="aceitou()">Aceito 😄</button>
+          <button class="btn-secondary" onclick="aceitou()">Já aceitei desde o início 😎</button>
+        </div>
+
+        <div id="mensagem-final" class="mensagem-final hidden">
+          <h3>Agora é oficial.</h3>
+          <p>Obrigado por fazer parte da nossa história.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
