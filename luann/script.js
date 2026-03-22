@@ -1,23 +1,25 @@
 // efeito de digitação
-const text = "Mais do que alunos,\numa história sendo construída.";
 const typedElement = document.querySelector(".typed-text");
-let index = 0;
 
-function typeWriter() {
-  if (index < text.length) {
-    if (text.charAt(index) === "\n") {
-      typedElement.innerHTML += "<br>";
-    } else {
-      typedElement.innerHTML += text.charAt(index);
+if (typedElement) {
+  const text = "Mais do que alunos,\numa história sendo construída.";
+  let index = 0;
+
+  function typeWriter() {
+    if (index < text.length) {
+      if (text.charAt(index) === "\n") {
+        typedElement.innerHTML += "<br>";
+      } else {
+        typedElement.innerHTML += text.charAt(index);
+      }
+      index++;
+      setTimeout(typeWriter, 45);
     }
-    index++;
-    setTimeout(typeWriter, 45);
   }
+
+  typedElement.innerHTML = "";
+  typeWriter();
 }
-
-typedElement.innerHTML = "";
-typeWriter();
-
 
 // efeito reveal ao rolar
 const reveals = document.querySelectorAll(".reveal");
@@ -38,10 +40,24 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-
 // clique final
 function aceitou() {
   const mensagem = document.getElementById("mensagem-final");
-  mensagem.classList.remove("hidden");
-  mensagem.scrollIntoView({ behavior: "smooth", block: "center" });
+  if (mensagem) {
+    mensagem.classList.remove("hidden");
+    mensagem.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
+
+// clique nas fotos
+function toggleCard(card) {
+  const cards = document.querySelectorAll(".foto-card");
+
+  cards.forEach((item) => {
+    if (item !== card) {
+      item.classList.remove("ativa");
+    }
+  });
+
+  card.classList.toggle("ativa");
 }
